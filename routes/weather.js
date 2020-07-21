@@ -16,7 +16,8 @@ router.get('/', (req,res) => {
 
 router.post('/',async (req,res) => {
     const city = req.body.city;
-    const url_api = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={Aprocess.env.API_KEY}';
+    const api = process.env.API_KEY;
+    const url_api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`;
     
     try {
         await fetch(url_api)
