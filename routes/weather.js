@@ -20,8 +20,8 @@ router.post('/',async (req,res) => {
     
     try {
         await fetch(url_api)
-    .then(res => res.json())
-    .then(data => {
+        .then(res => res.json())
+        .then(data => {
         if(data.message === 'city not fonud') {
            res.render('index', {
                city: data.message,
