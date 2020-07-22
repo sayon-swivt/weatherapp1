@@ -3,6 +3,12 @@ const { constants } = require('buffer');
 const router = require('express').Router();
 const fetch = require('node-fetch');
 require('dotenv').config()
+const mongo = require('mongodb');
+const assert = require('assert');
+
+var url =`mongodb://localhost:27017`;
+
+
 
 router.get('/', (req, res) => {
    // res.send('Hello From express');
