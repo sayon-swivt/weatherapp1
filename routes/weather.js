@@ -5,8 +5,9 @@ const fetch = require('node-fetch');
 require('dotenv').config()
 const mongo = require('mongodb');
 const assert = require('assert');
+const { RSA_NO_PADDING } = require('constants');
 
-var url =`mongodb://localhost:27017`;
+var url =`mongodb://localhost:27017/test`;
 
 
 
@@ -18,6 +19,10 @@ router.get('/', (req, res) => {
     icon: null,
     temp:null
    });
+});
+
+router.get('/get-data', function(req,res , next) {
+      
 });
 
 router.post('/', async (req,res) => {
